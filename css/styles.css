@@ -38,6 +38,17 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+article {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 575px){
+  article{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10181,7 +10192,6 @@ img::-moz-selection {
     position: fixed;
     top: -67px;
     transition: transform 0.2s;
-    border-bottom: 1px solid white;
     background-color: rgba(255, 255, 255, 0.9);
   }
   #mainNav.is-fixed .navbar-brand {
@@ -10256,7 +10266,7 @@ form .form-group:first-child .floating-label-form-group {
 
 footer {
   padding: 50px 0 65px;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 footer .list-inline {
   margin: 0;
@@ -10681,6 +10691,7 @@ header.masthead .post-heading .meta a {
   border: none;
   color: #FFF;
   margin: 20px auto;
+  margin-bottom: 50px;
   display: block;
   font-size: 1rem;
   font-weight: 600;
@@ -10702,6 +10713,7 @@ header.masthead .post-heading .meta a {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -10866,6 +10878,7 @@ header.masthead .post-heading .meta a {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .card-horizontal {
@@ -10980,6 +10993,10 @@ header.masthead .post-heading .meta a {
   margin-top: 20px;
 }
 
+.button-home:hover {
+  background: #fed136;
+  transition: .5s;
+}
 .home-img{
     margin-top: 20%;
     margin-left: auto;
@@ -11037,3 +11054,5 @@ header.masthead .post-heading .meta a {
     width: 255px;
   }
 }
+
+
