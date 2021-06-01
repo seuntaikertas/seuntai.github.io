@@ -13,17 +13,16 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/lightslider.css">
     </head>
+
     <body>
+      
+    <header>
 
-<!--Pre-loading-->
-<div id="loader"></div>
-
-<div id="mydiv">
-    
-        <!--ScrollUp-->
-        <a class="scrollUp" href="#"><span class="fas fa-chevron-up"></span></a>
-
+     <!--Pre-loading-->
+     <div id="loader"></div>
+        
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
@@ -33,16 +32,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="article.html">Article</a></li>
+                        <li class="nav-item"><a class="nav-link" href="article">Article</a></li>
                         <li class="nav-item"><a class="nav-link" href="about-us">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+    </header>
 
+    <main>
         <!-- Page Header-->
-        <div class="home">
+        <header class="home">
                 <div class="row-home">
 
                     <div class="col-home">
@@ -66,11 +67,10 @@
                             <button type="button" class="button-home" onclick="location.href='article.html'">Cari</button>
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        
                 </div>
-        </div>
+        </header>
 
 
          <!-- Main Content-->
@@ -80,29 +80,38 @@
 
         <div class="card-holder">
             <div class="card">
-                <img src="assets/img/post-bg.jpg" class="card-img">
+                <a href="pentingnya-vit-c-untuk-tubuh">
+                    <div class="image-effect">
+                        <img src="assets/img/post-bg.jpg" class="card-img">
+                    </div>
+
                 <div class="card-content">
                     <h1 class="card-name">Pentingnya Vitamin C Untuk Tubuh</h1>
+                </a>
                     <p>Apakah tanpa vitamin C, tubuh kita dapat bertahan? Apa itu radikal bebas? Apa yang dimaksud antioksidan? Pertanyaan-pertanyaan tersebut mari kita bahas. </p>
-                <a href="pentingnya-vit-c-untuk-tubuh.html" class="read-more-btn">Read More</a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="assets/img/digital-market-bg.jpg" class="card-img">
+                <a href="7-kesalahan-umum-dalam-menjalankan-digital-marketing">
+                    <div class="image-effect">
+                        <img src="assets/img/digital-market-bg.jpg" class="card-img">
+                    </div>
+
                 <div class="card-content">
                     <h1 class="card-name">7 Kesalahan Umum Dalam Menjalankan Digital Marketing</h1>
+                </a>
                     <p>Banyak sekali orang yang melakukan kesalahan yang sama, padahal sudah jelas kesalahan bisa kita hindari dengan cara belajar dari pengalaman orang lain contohnya.</p>
-                <a href="7-kesalahan-umum-dalam-menjalankan-digital-marketing.html" class="read-more-btn">Read More</a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="assets/img/post/mental.png" class="card-img">
+                <a href="alasan-mengapa-fokus-pada-satu-hal-itu-penting">
+                <img src="assets/img/focus-bg.jpg" class="card-img">
                 <div class="card-content">
-                    <h1 class="card-name">The bloody</h1>
-                    <p>loroegeogjegoejg</p>
-                <a href="index.html" class="read-more-btn">Read More</a>
+                    <h1 class="card-name">Asalan Mengapa Fokus Pada Satu Hal Itu Penting</h1>
+                </a>
+                    <p>Pernahkah kalian melihat orang yang hanya bisa satu hal saja ? ataukah kalian salah satunya ? Lalu, bisakah mereka sukses ?</p>
                 </div>
             </div>
 
@@ -134,58 +143,47 @@
             </div>
         </div>
                 <!-- See more-->
-                <button class="button-load text-uppercase">Load More</button>
-                
+                <button class="button-load text-uppercase">Load More</button>          
+        </main>
 
-       <!-- Footer-->
-       <footer class="footer">
+    <!-- Footer-->
+    <footer>
      <div class="container">
         <div class="row">
             <div class="footer-col">
                 <img src="assets/logo.svg">
-                
             </div>
-            <div class="footer-col">
-                <h4>tentang</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Category</h4>
-                <ul>
-                    <li><a href="#">Sport</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Knowledge</a></li>
-                    <li><a href="#">Social</a></li>
-                    <li><a href="#">Social</a></li>
 
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="article">Article</a></li>
+                    <li><a href="about-us">About Us</a></li>
+                    <li><a href="contact-us">Contact</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>follow us</h4>
+               <h4>follow us</h4>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/seuntaikertas-109781241300593"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/seuntaikertas/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/seuntaikertas"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
      </div>
-     <div class="footer-bottom">
-         <p>Copyright &copy;
-            <script>
-                document.write(new Date().getFullYear());
-            </script> Seuntai Kertas. All Rights Reserved.</p>
-     </div>
-  </footer>
 
-  </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; <script> document.write(new Date().getFullYear()); </script> Seuntai Kertas. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/lightslider.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

@@ -117,3 +117,14 @@ function move(e){
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
     })
 }
+
+// LightSlider
+$(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
