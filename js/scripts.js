@@ -121,27 +121,25 @@ const twitter = document.querySelector(".twitter");
 const whatsapp = document.querySelector(".whatsapp");
 
 function init() {
-    var img = document.querySelector(".masthead"),
-    url = img.style.backgroundImage;
-
-    console.log(url);
+    const img = document.querySelector(".masthead").style.backgroundImage.split('"');
+    const title = document.querySelector('title');
 
     let postUrl = encodeURI(document.location.href);
-    let postTitle = encodeURI("Hello, check this out");
-    let postImg = img;
+    let postTitle = encodeURI(document.title);
+    let postImg = encodeURI(img);
 
     facebook.setAttribute(
         "href",
-        `https://www.facebook.com/sharer.php?u=${postUrl}`
+        `https://www.facebook.com/sharer.php?u=${postUrl}&media=${postImg}`
     );
 
     twitter.setAttribute(
         "href",
-        `https://twitter.com/share?url=${postUrl}`
+        `https://twitter.com/share?url=${postUrl}&media=${postImg}&text=${postTitle}`
         );
     whatsapp.setAttribute(
         "href",
-        `https://api.whatsapp.com/send?u=${postUrl}`
+        `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`
         )
 }
 
