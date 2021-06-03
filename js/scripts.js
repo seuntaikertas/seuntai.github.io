@@ -1,19 +1,5 @@
-/*!
-* Start Bootstrap - Clean Blog v5.1.0 (https://startbootstrap.com/theme/clean-blog)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
-*/
 (function ($) {
     "use strict"; // Start of use strict
-
-    // Floating label headings for the contact form
-    $("body").on("input propertychange", ".floating-label-form-group", function (e) {
-        $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-    }).on("focus", ".floating-label-form-group", function () {
-        $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function () {
-        $(this).removeClass("floating-label-form-group-with-focus");
-    });
 
     // Show the navbar when the page is scrolled up
     var MQL = 992;
@@ -128,3 +114,52 @@ $(document).ready(function() {
         } 
     });  
   });
+
+//Link URL Share
+const facebook = document.querySelector(".facebook");
+const twitter = document.querySelector(".twitter");
+const whatsapp = document.querySelector(".whatsapp");
+
+function init() {
+    var img = document.querySelector(".masthead"),
+    url = img.style.backgroundImage;
+
+    console.log(url);
+
+    let postUrl = encodeURI(document.location.href);
+    let postTitle = encodeURI("Hello, check this out");
+    let postImg = img;
+
+    facebook.setAttribute(
+        "href",
+        `https://www.facebook.com/sharer.php?u=${postUrl}&media=${postImg}`
+    );
+
+    twitter.setAttribute(
+        "href",
+        `https://twitter.com/share?url=${postUrl}&media=${postImg}`
+        );
+    whatsapp.setAttribute(
+        "href",
+        `https://api.whatsapp.com/send?url=${postUrl}`
+        )
+}
+
+init();
+
+
+//ScrollUp
+const sharebutton = document.querySelector('.share-button');
+
+window.addEventListener("scroll", () => {
+    if(window.pageYOffset > 300) {
+        sharebutton.classList.add("active");
+    } else {
+        sharebutton.classList.remove("active");
+    }
+
+    if(window.pageYOffset > 1300) {
+        sharebutton.classList.remove("active");
+    }
+  
+});
