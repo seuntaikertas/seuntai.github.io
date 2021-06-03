@@ -132,16 +132,16 @@ function init() {
 
     facebook.setAttribute(
         "href",
-        `https://www.facebook.com/sharer.php?u=${postUrl}&media=${postImg}`
+        `https://www.facebook.com/sharer.php?u=${postUrl}`
     );
 
     twitter.setAttribute(
         "href",
-        `https://twitter.com/share?url=${postUrl}&media=${postImg}`
+        `https://twitter.com/share?url=${postUrl}`
         );
     whatsapp.setAttribute(
         "href",
-        `https://api.whatsapp.com/send?url=${postUrl}`
+        `https://api.whatsapp.com/send?u=${postUrl}`
         )
 }
 
