@@ -286,7 +286,7 @@ a > code {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .col {
@@ -1528,6 +1528,12 @@ header.masthead .post-heading .meta a {
   color:#fff;
 }
 
+@media (max-width: 991px){
+  .scrollUp {
+    display: none;
+  }
+}
+
 .btn-social {
   height: 2.5rem;
   width: 2.5rem;
@@ -2230,8 +2236,6 @@ footer{
   text-transform: uppercase;
 }
 
-
-
 .username p {
   font-size: 17px;
   margin: 0;
@@ -2261,11 +2265,52 @@ footer{
 
 .share-button{
   display: flex;
+  flex-direction: row;
+  width: 240px;
+  height: 60px;
+  border: 1px solid #aeaeae;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+}
+
+.share-button a{
+  opacity: 1;
+  font-size: 26px;
+  flex: 1;
+  color: #2d3436;
+  text-align: center;
+  justify-content: center;
+}
+
+.share-button span{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #212529;
+  background-color: #f9f9f8;
+  text-align: center;
+  line-height: 60px;
+  z-index: 999;
+  transition: .3s linear;
+  border-radius: 40px;
+}
+
+.share-button:active span{
+  opacity: 0;
+}
+
+@media (min-width: 992px) {
+.share-button{
+  display: flex;
   flex-direction: column;
-  left: 6%;
-  top : 80%;
-  width: 80px;
-  height: 80px;
+  left: 14%;
+  top : 84%;
+  width: 60px;
+  height: 60px;
   border: 1px solid #aeaeae;
   border-radius: 40px;
   align-items: center;
@@ -2288,12 +2333,14 @@ footer{
 }
 
 .share-button span{
+  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
   color: #212529;
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
+  background-color: transparent;
   z-index: 999;
   transition: .3s linear;
   border-radius: 40px;
@@ -2327,6 +2374,7 @@ footer{
 
 .twitter:hover {
   color: #00acee;
+}
 }
 
 
