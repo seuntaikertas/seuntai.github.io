@@ -119,23 +119,27 @@ $(document).ready(function() {
 const facebook = document.querySelector(".facebook");
 const twitter = document.querySelector(".twitter");
 const whatsapp = document.querySelector(".whatsapp");
+const prvFacebook = document.querySelector('meta[property="og:image"');
 
 function init() {
-    const img = document.querySelector(".masthead").style.backgroundImage.split('(")');
+    const img = document.querySelector(".masthead").style.backgroundImage.slice(5,-2);
     const title = document.querySelector('title');
 
     let postUrl = encodeURI(document.location.href);
     let postTitle = encodeURI(document.title);
-    let postImg = encodeURI(document.location.url);
+    let postImg = img;
+
+    prvFacebook.setAttribute (
+        "content", `${postImg}`);
 
     facebook.setAttribute(
         "href",
-        `https://www.facebook.com/sharer.php?u=${postUrl}`
+        `https://www.facebook.com/sharer.php?u=${postUrl}$text=${postTitle}`
     );
 
     twitter.setAttribute(
         "href",
-        `https://twitter.com/share?url=${postUrl}&media=${postImg}&text=${postTitle}`
+        `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
         );
     whatsapp.setAttribute(
         "href",
@@ -146,7 +150,7 @@ function init() {
 init();
 
 
-//ScrollUp
+//PopUp Share media social
 const sharebutton = document.querySelector('.share-button');
 
 window.addEventListener("scroll", () => {
