@@ -121,16 +121,16 @@ const twitter = document.querySelector(".twitter");
 const whatsapp = document.querySelector(".whatsapp");
 
 function init() {
-    const img = document.querySelector(".masthead").style.backgroundImage.split('"');
+    const img = document.querySelector(".masthead").style.backgroundImage.split('(")');
     const title = document.querySelector('title');
 
     let postUrl = encodeURI(document.location.href);
     let postTitle = encodeURI(document.title);
-    let postImg = encodeURI(img);
+    let postImg = encodeURI(document.location.url);
 
     facebook.setAttribute(
         "href",
-        `https://www.facebook.com/sharer.php?u=${postUrl}&media=${postImg}`
+        `https://www.facebook.com/sharer.php?u=${postUrl}`
     );
 
     twitter.setAttribute(
