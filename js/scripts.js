@@ -130,7 +130,7 @@ function init() {
     let postImg = img;
 
     prvFacebook.setAttribute (
-        "content", `${postImg}`);
+        "content", `https://seuntaikertas.com/${postImg}`);
 
     facebook.setAttribute(
         "href",

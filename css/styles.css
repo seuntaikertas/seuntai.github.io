@@ -2305,6 +2305,7 @@ footer{
 
 .share-button:hover span, .share-button:active span{
   opacity: 0;
+  transform: scale(0);
 }
 
 @media (min-width: 992px) {
