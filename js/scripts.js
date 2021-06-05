@@ -120,6 +120,9 @@ const facebook = document.querySelector(".facebook");
 const twitter = document.querySelector(".twitter");
 const whatsapp = document.querySelector(".whatsapp");
 const prvFacebook = document.querySelector('meta[property="og:image"');
+const urlFacebook = document.querySelector('meta[property="og:url"');
+const titleFacebook = document.querySelector('meta[property="og:title"');
+const decsFacebook = document.querySelector('meta[property="og:description"');
 
 function init() {
     const img = document.querySelector(".masthead").style.backgroundImage.slice(5,-2);
@@ -144,7 +147,13 @@ function init() {
     whatsapp.setAttribute(
         "href",
         `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`
-        )
+        );
+    urlFacebook.setAttribute (
+        "content", `${postUrl}`
+        );
+    titleFacebook.setAttribute (
+        "content", `${postTitle}`
+        );
 }
 
 init();
@@ -160,7 +169,7 @@ window.addEventListener("scroll", () => {
         sharebutton.classList.remove("active");
     }
 
-    if(window.pageYOffset > 1300) {
+    if(window.pageYOffset > window.innerHeight+750) {
         sharebutton.classList.remove("active");
     }
   
