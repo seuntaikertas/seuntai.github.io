@@ -119,44 +119,29 @@ $(document).ready(function() {
 const facebook = document.querySelector(".facebook");
 const twitter = document.querySelector(".twitter");
 const whatsapp = document.querySelector(".whatsapp");
-const prvFacebook = document.querySelector('meta[property="og:image"');
-const urlFacebook = document.querySelector('meta[property="og:url"');
-const titleFacebook = document.querySelector('meta[property="og:title"');
-const decsFacebook = document.querySelector('meta[property="og:description"');
 
 function init() {
-    const img = document.querySelector(".masthead").style.backgroundImage.slice(5,-2);
     const title = document.querySelector('title');
 
     let postUrl = encodeURI(document.location.href);
     let postTitle = encodeURI(document.title);
-    let postImg = img;
-
-    prvFacebook.setAttribute (
-        "content", `https://seuntaikertas.com/${postImg}`);
 
     facebook.setAttribute(
         "href",
-        `https://www.facebook.com/sharer.php?u=${postUrl}&text=${postTitle}`
+        `https://www.facebook.com/sharer.php?u=${postUrl}`
     );
 
     twitter.setAttribute(
         "href",
         `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
         );
+
     whatsapp.setAttribute(
         "href",
         `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`
         );
-    urlFacebook.setAttribute (
-        "content", `${postUrl}`
-        );
-    titleFacebook.setAttribute (
-        "content", `${postTitle}`
-        );
-}
 
-init();
+}init();
 
 
 //PopUp Share media social
@@ -169,8 +154,7 @@ window.addEventListener("scroll", () => {
         sharebutton.classList.remove("active");
     }
 
-    if(window.pageYOffset > window.innerHeight+750) {
+    if(window.pageYOffset > 1500) {
         sharebutton.classList.remove("active");
     }
-  
 });
