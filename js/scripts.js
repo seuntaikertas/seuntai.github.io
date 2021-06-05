@@ -154,7 +154,7 @@ window.addEventListener("scroll", () => {
         sharebutton.classList.remove("active");
     }
 
-    if(window.pageYOffset > 1500) {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 400) {
         sharebutton.classList.remove("active");
     }
 });
