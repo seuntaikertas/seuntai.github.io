@@ -134,7 +134,7 @@ function init() {
 
     facebook.setAttribute(
         "href",
-        `https://www.facebook.com/sharer.php?u=${postUrl}$text=${postTitle}`
+        `https://www.facebook.com/sharer.php?u=${postUrl}&text=${postTitle}`
     );
 
     twitter.setAttribute(
