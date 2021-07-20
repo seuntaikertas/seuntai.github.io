@@ -104,7 +104,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #fed135;
+  color: red;
   text-decoration: none;
 }
 
