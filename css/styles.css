@@ -1802,6 +1802,7 @@ footer{
 .image-effect {
   position: relative;
   overflow: hidden;
+  border-radius: 0.25rem;
 }
 
 .card-img {
