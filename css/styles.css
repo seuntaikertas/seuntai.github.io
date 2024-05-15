@@ -1984,19 +1984,19 @@ footer{
 }
 
 .card-content-horizontal {
-  padding: 1rem;
+  padding: 0.7rem;
 }
 
 .card-content-horizontal h1 {
-  margin-bottom: .5rem;
+  margin-bottom: .4rem;
   letter-spacing: 1px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 100%;
 }
 
 .card-content-horizontal p {
   margin: 0;
-  font-size: 0.93rem;
+  font-size: 0.84rem;
   color: #484a51;
   margin-bottom: 1rem;
 }
